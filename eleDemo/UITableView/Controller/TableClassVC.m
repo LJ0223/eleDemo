@@ -16,7 +16,7 @@
 
 @property (nonatomic, strong) UITableView *eleTable;
 @property (nonatomic, strong) ClassView *classView;
-@property (nonatomic, assign) NSIndexPath *lastIndexPath;
+@property (nonatomic, assign) NSIndexPath *lastIndexPath; // 标记上一次的选中状态
 @property (nonatomic, strong) NSMutableArray *sourceData;
 
 @end
@@ -36,7 +36,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"eleDemo";
+    self.title = @"侧面菜单栏，右侧是tableView";
     
     [self sourceData];
     [self eleTable];

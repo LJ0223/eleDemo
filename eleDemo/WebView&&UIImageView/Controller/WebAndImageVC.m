@@ -15,9 +15,10 @@
 
 @property (nonatomic, strong) UITableView *eleTable;
 @property (nonatomic, strong) UIImageView *showImage;
-@property (nonatomic, assign) NSIndexPath *lastIndexPath;
 @property (nonatomic, strong) UIWebView *myWeb;
 @property (nonatomic, strong) NSMutableArray *sourceData;
+
+@property (nonatomic, assign) NSIndexPath *lastIndexPath; // 标记上一次的选中状态
 
 @end
 
@@ -27,7 +28,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
+        // 初始坐标{0，0}
         self.lastIndexPath = [NSIndexPath indexPathForRow:0 inSection:0] ;
     }
     return self;
@@ -36,7 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"eleDemo";
+    self.title = @"侧面菜单栏，右侧是WebView";
     
     [self sourceData];
     [self eleTable];
